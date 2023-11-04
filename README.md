@@ -291,12 +291,8 @@ else if(!col4)
 }
 ```
 ## Output screen shots of proteus  :
-
  ![image](https://github.com/SriSaiPriyaSenthilvel/EXPERIMENT--05-INTERFACING-A-4X4-MATRIX-KEYPAD-AND-DISPLAY-THE-OUTPUT-ON-LCD/assets/119475702/73686e51-108a-43af-8f07-8548679bdc91)
-
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
-
 ![image](https://github.com/SriSaiPriyaSenthilvel/EXPERIMENT--05-INTERFACING-A-4X4-MATRIX-KEYPAD-AND-DISPLAY-THE-OUTPUT-ON-LCD/assets/119475702/83312aeb-e8c1-4fc0-8a1b-15d19e3facf5)
-
 ## Result :
 Interfacing a 4x4 keypad with ARM microcontroller are simulated in proteus and the results are verified.
