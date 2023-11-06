@@ -2,6 +2,10 @@
 
 
 
+
+
+
+
 ## Aim: 
 To Interface a 4X4 matrix keypad and show the output on 16X2 LCD display to ARM controller , and simulate it in Proteus
 
@@ -132,6 +136,8 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 16. click on debug and simulate using simulation as shown below 
 ![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)
+
+
 
 ## STM 32 CUBE PROGRAM :
 ```
