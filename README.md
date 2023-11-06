@@ -1,15 +1,9 @@
 # EXPERIMENT--05-INTERFACING-A-4X4-MATRIX-KEYPAD-AND-DISPLAY-THE-OUTPUT-ON-LCD
 
-
-
 ## Aim: 
 To Interface a 4X4 matrix keypad and show the output on 16X2 LCD display to ARM controller , and simulate it in Proteus
-
-
-
 ## Components required: 
 STM32 CUBE IDE, Proteus 8 simulator .
-
 ## Theory:
 ![image](https://github.com/vasanthkumarch/EXPERIMENT--05-INTERFACING-A-4X4-MATRIX-KEYPAD-AND-DISPLAY-THE-OUTPUT-ON-LCD/assets/36288975/2a4a795e-1674-4329-ae07-3f5e8d5073e2)
 4×4 Keypad Module Pin Diagram
@@ -43,9 +37,7 @@ Below is the Pinout and Pin Description of 16x2 LCD Module:
 4-bit and 8-bit Mode of LCD:
 
 The LCD can work in two different modes, namely the 4-bit mode and the 8-bit mode. In 4 bit mode we send the data nibble by nibble, first upper nibble and then lower nibble. For those of you who don’t know what a nibble is: a nibble is a group of four bits, so the lower four bits (D0-D3) of a byte form the lower nibble while the upper four bits (D4-D7) of a byte form the higher nibble. This enables us to send 8 bit data.
-
 Whereas in 8 bit mode we can send the 8-bit data directly in one stroke since we use all the 8 data lines.
-
  8-bit mode is faster and flawless than 4-bit mode. But the major drawback is that it needs 8 data lines connected to the microcontroller. This will make us run out of I/O pins on our MCU, so 4-bit mode is widely used. No control pins are used to set these modes. 
  
  LCD Commands:
@@ -144,17 +136,14 @@ void key()
 	  	  Lcd_PinType pins[]={GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
 	  	  Lcd_HandleTypeDef lcd;
       lcd=Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
-
 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0,GPIO_PIN_RESET);
 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_SET);
 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_SET);
 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_3,GPIO_PIN_SET);
-
 col1=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_4);
 col2=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_5);
 col3=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_6);
 col4=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_7);
-
 if(!col1)
 {
 Lcd_cursor(&lcd,0,1);
